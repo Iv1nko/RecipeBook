@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalculatorFragment">
+
+
+    <TextView
+        android:id="@+id/textGeneral"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Общая информация:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/buttonMale"
+        style="@style/ButtonStyle"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/toggle_button"
+        android:textOff="Мужчина"
+        android:textOn="Мужчина"
+        app:layout_constraintBottom_toTopOf="@id/buttonFemale"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textGeneral" />
+
+    <ToggleButton
+        android:id="@+id/buttonFemale"
+        style="@style/ButtonStyle"
+        android:background="@drawable/toggle_button"
+        android:textOn="Женщина"
+        android:textOff="Женщина"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toTopOf="@id/buttonFemale"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonMale"/>
+
+    <TextView
+        android:id="@+id/textAge"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Возраст, лет"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonFemale" />
+
+    <EditText
+        android:id="@+id/editAge"
+        style="@style/EditTextStyle"
+        app:layout_constraintEnd_toEndOf="@+id/textAge"
+        app:layout_constraintStart_toStartOf="@+id/textAge"
+        app:layout_constraintTop_toBottomOf="@+id/textAge" />
+
+    <TextView
+        android:id="@+id/textHeight"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Рост, см"
+        app:layout_constraintEnd_toStartOf="@+id/textWeight"
+        app:layout_constraintStart_toEndOf="@+id/textAge"
+        app:layout_constraintTop_toBottomOf="@+id/buttonFemale" />
+
+    <EditText
+        android:id="@+id/editHeight"
+        style="@style/EditTextStyle"
+        app:layout_constraintEnd_toEndOf="@+id/textHeight"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="@+id/textHeight"
+        app:layout_constraintTop_toBottomOf="@+id/textHeight" />
+
+    <TextView
+        android:id="@+id/textWeight"
+        android:gravity="center"
+        android:layout_width="82dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        android:text="Вес, кг"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintTop_toBottomOf="@+id/buttonFemale" />
+
+    <EditText
+        android:id="@+id/editWeight"
+        style="@style/EditTextStyle"
+        app:layout_constraintEnd_toEndOf="@+id/textWeight"
+        app:layout_constraintStart_toStartOf="@+id/textWeight"
+        app:layout_constraintTop_toBottomOf="@+id/textWeight" />
+
+    <TextView
+        android:id="@+id/textAim"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ваша цель:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editAge" />
+
+    <ToggleButton
+        android:id="@+id/buttonDecreaseWeight"
+        style="@style/ButtonStyle"
+        android:background="@drawable/toggle_button"
+        android:layout_marginTop="24dp"
+        android:textOff="Сброс веса"
+        android:textOn="Сброс веса"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textAim" />
+
+    <ToggleButton
+        android:id="@+id/buttonSupportWeight"
+        android:background="@drawable/toggle_button"
+        style="@style/ButtonStyle"
+        android:textOn="Поддержка веса"
+        android:textOff="Поддержка веса"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDecreaseWeight" />
+
+    <ToggleButton
+        android:id="@+id/buttonIncreaseWeight"
+        style="@style/ButtonStyle"
+        android:background="@drawable/toggle_button"
+        android:textOn="Набрать вес"
+        android:textOff="Набрать вес"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSupportWeight" />
+
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/textPhysicallyLevel"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:textSize="18dp"
+        android:visibility="gone"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/buttonIncreaseWeight"
+        android:text="Ваш уровень физической нагрузки:"/>
+
+    <Button
+        android:id="@+id/buttonCount"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="25dp"
+        android:text="Подсчитать"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonIncreaseWeight" />
+
+    <TextView
+        android:id="@+id/textQuota"
+        android:visibility="gone"
+        android:layout_marginTop="50dp"
+        android:textSize="22sp"
+        android:textColor="@color/black"
+        android:text="Ваша суточная норма:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/textCalories"
+        android:visibility="gone"
+        android:layout_marginTop="15dp"
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textQuota"/>
+
+    <Button
+        android:id="@+id/buttonRecount"
+        android:text="Изменить параметры"
+        android:visibility="gone"
+        android:background="@drawable/toggle_button"
+        android:textSize="18sp"
+        android:layout_marginTop="35dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textCalories" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

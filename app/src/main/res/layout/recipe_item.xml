@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="168dp"
+    android:layout_height="135dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="8.5dp">
+
+
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="bottom">
+
+                        <ImageView
+                            android:id="@+id/imageOfDish"
+                            android:src="@drawable/recipe2"
+                            android:scaleType="fitXY"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                        <TextView
+                            android:id="@+id/textTitle"
+                            android:paddingStart="4dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:background="#50000000"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:layout_gravity="bottom"
+                            tools:text="Title of Dish"/>
+
+                </FrameLayout>
+        </androidx.cardview.widget.CardView>
+</FrameLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <EditText
+        android:id="@+id/etIngredient"
+        android:hint="Название ингредиента"
+        android:inputType="textCapSentences"
+        android:textSize="17dp"
+        android:maxLength="26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/etIngredientGramms"
+        android:hint="Кол-во"
+        android:maxLength="6"
+        android:textSize="18dp"
+        android:inputType="number"
+        android:gravity="center"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="3dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:text="г"
+        android:textSize="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="7dp"
+        app:layout_constraintBottom_toBottomOf="@id/etIngredientGramms"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonFinishIngredient"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:backgroundTint="@color/yellow"
+        android:inputType="textCapSentences"
+        android:text="Закончить описание ингредиента"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etIngredient"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

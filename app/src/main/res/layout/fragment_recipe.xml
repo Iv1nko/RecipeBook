@@ -1,0 +1,305 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Recipe.RecipeFragment">
+
+    <androidx.core.widget.NestedScrollView
+    android:overScrollMode="always"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/imageOfDish"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textTitle"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="25dp"
+                android:textColor="@color/black"
+                android:textSize="26.5sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageOfDish" />
+
+            <TextView
+                android:id="@+id/textCpfc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:text="Пищевая ценность на 100 грамм:"
+                android:textColor="@color/gray"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textTitle" />
+
+            <View
+                android:id="@+id/view1"
+                style="@style/ColorfulViewStyle"
+                android:layout_marginStart="9dp"
+                app:layout_constraintEnd_toStartOf="@id/space1"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textCalories"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="Калории"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/view1"
+                app:layout_constraintStart_toStartOf="@+id/view1"
+                app:layout_constraintTop_toTopOf="@id/view1" />
+
+            <View
+                android:id="@+id/whiteView1"
+                style="@style/WhiteViewStyle"
+                android:background="@drawable/round_background"
+                android:backgroundTint="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/view1"
+                app:layout_constraintStart_toStartOf="@+id/view1" />
+
+            <TextView
+                android:id="@+id/textQuantityOfCalories"
+                style="@style/TextStyle"
+                app:layout_constraintEnd_toEndOf="@+id/whiteView1"
+                app:layout_constraintStart_toStartOf="@+id/whiteView1" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:text="кКал"
+                android:textColor="@color/gray"
+                app:layout_constraintBottom_toBottomOf="@+id/whiteView1"
+                app:layout_constraintEnd_toEndOf="@+id/whiteView1"
+                app:layout_constraintStart_toStartOf="@+id/whiteView1" />
+
+            <Space
+                android:id="@+id/space1"
+                style="@style/SpaceStyle"
+                android:layout_marginStart="9dp"
+                app:layout_constraintEnd_toStartOf="@id/space2"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <View
+                android:id="@+id/view2"
+                style="@style/ColorfulViewStyle"
+                app:layout_constraintEnd_toStartOf="@id/space2"
+                app:layout_constraintStart_toEndOf="@id/space1" />
+
+            <TextView
+                android:id="@+id/textProteins"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="Белки"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/view2"
+                app:layout_constraintStart_toStartOf="@+id/view2"
+                app:layout_constraintTop_toTopOf="@id/view2" />
+
+            <View
+                android:id="@+id/whiteView2"
+                style="@style/WhiteViewStyle"
+                android:background="@drawable/round_background"
+                android:backgroundTint="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/view2"
+                app:layout_constraintStart_toStartOf="@+id/view2" />
+
+            <TextView
+                android:id="@+id/textQuantityOfProteins"
+                style="@style/TextStyle"
+                app:layout_constraintEnd_toEndOf="@+id/whiteView2"
+                app:layout_constraintStart_toStartOf="@+id/whiteView2" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:text="Гр."
+                android:textColor="@color/gray"
+                app:layout_constraintBottom_toBottomOf="@+id/whiteView2"
+                app:layout_constraintEnd_toEndOf="@+id/whiteView2"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/whiteView2" />
+
+            <Space
+                android:id="@+id/space2"
+                style="@style/SpaceStyle"
+                app:layout_constraintEnd_toStartOf="@id/space3"
+                app:layout_constraintStart_toEndOf="@+id/space1" />
+
+            <View
+                android:id="@+id/view3"
+                style="@style/ColorfulViewStyle"
+                app:layout_constraintEnd_toStartOf="@id/space3"
+                app:layout_constraintStart_toEndOf="@id/space2" />
+
+            <TextView
+                android:id="@+id/textFats"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="Жиры"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/view3"
+                app:layout_constraintStart_toStartOf="@+id/view3"
+                app:layout_constraintTop_toTopOf="@id/view3" />
+
+            <View
+                android:id="@+id/whiteView3"
+                style="@style/WhiteViewStyle"
+                android:background="@drawable/round_background"
+                android:backgroundTint="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/view3"
+                app:layout_constraintStart_toStartOf="@+id/view3" />
+
+            <TextView
+                android:id="@+id/textQuantityOfFats"
+                style="@style/TextStyle"
+                app:layout_constraintEnd_toEndOf="@+id/whiteView3"
+                app:layout_constraintStart_toStartOf="@+id/whiteView3" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:text="Гр."
+                android:textColor="@color/gray"
+                app:layout_constraintBottom_toBottomOf="@+id/whiteView3"
+                app:layout_constraintEnd_toEndOf="@+id/whiteView3"
+                app:layout_constraintStart_toStartOf="@+id/whiteView3" />
+
+            <Space
+                android:id="@+id/space3"
+                style="@style/SpaceStyle"
+                android:layout_marginEnd="9dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/space2" />
+
+            <View
+                android:id="@+id/view4"
+                style="@style/ColorfulViewStyle"
+                android:layout_marginEnd="9dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/space3" />
+
+            <TextView
+                android:id="@+id/textСarbohydrates"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="Углеводы"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/view4"
+                app:layout_constraintStart_toStartOf="@+id/view4"
+                app:layout_constraintTop_toTopOf="@id/view4" />
+
+            <View
+                android:id="@+id/whiteView4"
+                style="@style/WhiteViewStyle"
+                android:background="@drawable/round_background"
+                android:backgroundTint="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/view4"
+                app:layout_constraintStart_toStartOf="@+id/view4" />
+
+            <TextView
+                android:id="@+id/textQuantityOfCarbohydrates"
+                style="@style/TextStyle"
+                app:layout_constraintEnd_toEndOf="@+id/whiteView4"
+                app:layout_constraintStart_toStartOf="@+id/whiteView4" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:text="Гр."
+                android:textColor="@color/gray"
+                app:layout_constraintBottom_toBottomOf="@+id/whiteView4"
+                app:layout_constraintEnd_toEndOf="@+id/whiteView4"
+                app:layout_constraintStart_toStartOf="@+id/whiteView4" />
+
+            <TextView
+                android:id="@+id/textIngredients"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="25dp"
+                android:text="Ингридиенты:"
+                android:textColor="@color/black"
+                android:textSize="23sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view1" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcIngredients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/round_background"
+                android:backgroundTint="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textIngredients" />
+
+            <TextView
+                android:id="@+id/textSteps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="25dp"
+                android:text="Приготовление"
+                android:textColor="@color/black"
+                android:textSize="23sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rcIngredients" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcStep"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/round_background"
+                android:backgroundTint="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textSteps" />
+
+            <Button
+                android:id="@+id/buttonDelete"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="15dp"
+                android:text="Удалить рецепт"
+                android:textSize="19sp"
+                app:layout_constraintTop_toBottomOf="@id/rcStep"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                app:layout_constraintTop_toBottomOf="@id/buttonDelete" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

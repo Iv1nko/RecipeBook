@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_main">
+
+    <fragment
+        android:id="@+id/navigation_main"
+        android:name="com.example.recipebook.MainFragment"
+        android:label="Рецепты"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_navigation_main_to_navigation_recipe"
+            app:destination="@id/navigation_recipe"/>
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_add"
+        android:name="com.example.recipebook.AddFragment"
+        android:label="Добавить рецепт"
+        tools:layout="@layout/fragment_add" />
+
+    <fragment
+        android:id="@+id/navigation_calculator"
+        android:name="com.example.recipebook.CalculatorFragment"
+        android:label="Калькулятор калорий"
+        tools:layout="@layout/fragment_calculator" />
+
+
+    <fragment
+        android:id="@+id/navigation_recipe"
+        android:name="com.example.recipebook.Recipe.RecipeFragment"
+        android:label="Рецепт"
+        tools:layout="@layout/fragment_recipe">
+        <action
+            android:id="@+id/action_navigation_recipe_to_navigation_main"
+            app:destination="@id/navigation_main" />
+    </fragment>
+
+</navigation>
